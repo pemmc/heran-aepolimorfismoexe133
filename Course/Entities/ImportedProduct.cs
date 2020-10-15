@@ -25,9 +25,9 @@ namespace Course.Entities
         {
             return Name
                 + " $ "
-                + TotalPrice().ToString("F2", CultureInfo.InvariantCulture)
-                + " (Customs fee: $ "
-                + CustomsFee.ToString("F2", CultureInfo.InvariantCulture)
+                + TotalPrice().ToString("C", new CultureInfo("pt-BR").NumberFormat)
+                + " (Customs fee: R$ "
+                + CustomsFee.ToString("C", new CultureInfo("pt-BR").NumberFormat)
                 + ")";
         }
     }

@@ -20,8 +20,8 @@ namespace Course.Entities
         public virtual string PriceTag()
         {
             return Name
-                + " $ "
-                + Price.ToString("F2", CultureInfo.InvariantCulture);
+                + " R$ "
+                + Price.ToString("C", new CultureInfo("pt-BR").NumberFormat);
         }
     }
 }
